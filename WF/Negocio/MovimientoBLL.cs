@@ -22,20 +22,28 @@ namespace Negocio
 
             if ((movimientoENT.Tipo == "transferencia" && exento == false))
             {
-                movimientoENT.Gmf = (movimientoENT.Valor * 4) / 1000;                
+                movimientoENT.Gmf = (movimientoENT.Valor * 4) / 1000;
                 result = movimientoDAL.Transferir(movimientoENT);
             }
+
+            else if (movimientoENT.Tipo == "transferencia" && exento == true)
+            {
+                movimientoENT.Gmf = 0;
+                result = movimientoDAL.Transferir(movimientoENT);
+            }
+
             else if (movimientoENT.Tipo == "efectivo" && movimientoENT.Valor > 9600000)
             {
                 movimientoENT.Gmf = (movimientoENT.Valor * 4) / 1000;
                 result = movimientoDAL.TransferirEfectivo(movimientoENT);
             }
-            else if(movimientoENT.Tipo == "efectivo")
+
+            else if (movimientoENT.Tipo == "efectivo")
             {
                 movimientoENT.Gmf = 0;
                 result = movimientoDAL.TransferirEfectivo(movimientoENT);
             }
-            
+
             return result;
         }
 

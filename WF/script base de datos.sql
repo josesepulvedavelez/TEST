@@ -40,6 +40,7 @@ CREATE TABLE Movimiento
 )
 
 INSERT INTO Cliente(Nombres, Usuario, Contraseña, exento) VALUES('Jennifer Villa', 'jvilla', '1234567', 'false')
+INSERT INTO Cliente(Nombres, Usuario, Contraseña, exento) VALUES('Jose Sepulveda Velez', 'jsepulveda', '123', 'true')
 
 INSERT INTO Banco(Banco, Ciudad) VALUES('BBVA', 'BOGOTA')
 INSERT INTO Banco(Banco, Ciudad) VALUES('BANORTE', 'BOGOTA')
@@ -47,6 +48,7 @@ INSERT INTO Banco(Banco, Ciudad) VALUES('BANORTE', 'BOGOTA')
 INSERT INTO Cuenta(Numero, Tipo, Saldo, ClienteId, BancoId) VALUES('A', 'AHORROS', 110000000, 1, 1)
 INSERT INTO Cuenta(Numero, Tipo, Saldo, ClienteId, BancoId) VALUES('B', 'AHORROS', 65000000, 1, 2)
 INSERT INTO Cuenta(Numero, Tipo, Saldo, ClienteId, BancoId) VALUES('C', 'AHORROS', 500000, 1, 2)
+INSERT INTO Cuenta(Numero, Tipo, Saldo, ClienteId, BancoId) VALUES('D', 'CORRIENTE', 1700000000, 2, 2)
 
 CREATE VIEW ClienteCuentaView
 AS 

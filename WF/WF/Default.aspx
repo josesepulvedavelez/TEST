@@ -76,11 +76,12 @@
 				<tr>
 					<td>Valor: </td>
 					<td><b><asp:TextBox ID="txtValor" runat="server" TextMode="Number">0</asp:TextBox></b></td>
-				</tr>
-				<tr>
-					<td colspan="2"><asp:Button ID="btnTransferir" runat="server" Text="Aceptar" class="btn btn-lg btn-primary btn-block btn-signin" OnClick="btnTransferir_Click" /></td>					
-				</tr>
+				</tr>				
 			</table>
+			<br />
+			<p>
+				<asp:Button ID="btnTransferir" runat="server" Text="Aceptar" class="btn btn-lg btn-primary btn-block btn-signin" OnClick="btnTransferir_Click" />				
+			</p>
 		</div>
 
 	</div>    
